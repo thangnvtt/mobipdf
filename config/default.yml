@@ -1,0 +1,45 @@
+port: env(PORT)
+
+settings:
+  disk:
+    driver: 'local'
+    local:
+      directory: 'temp'
+    upload:
+      path: './temp/upload'
+    convert:
+      path: './temp/convert'
+    graphic:
+      path: './public/thumb'
+    zip:
+      path: './temp/zip'
+  loggerFormat: tiny
+  session:
+    store: '@foal/typeorm'
+
+database:
+  type: better-sqlite3
+  database: './db.sqlite3'
+
+convert:
+  progress:
+    max: 100
+    min: 0
+    warning: 90
+    waiting: 99
+  percent: 0.2
+  options:
+    authors: 'ThangNV'
+    pageBreaksBefore: '//h:h1'
+    chapter: '//h:h1'
+    insertBlankLine: true
+    insertBlankLineSize: '1'
+    lineHeight: '12'
+    marginTop: '50'
+    marginRight: '50'
+    marginBottom: '50'
+    marginLeft: '50'
+graphic:
+  width: 150
+  height: 150
+  quality: 40
