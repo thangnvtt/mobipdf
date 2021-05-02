@@ -24,10 +24,10 @@
     "node": ">=8"
   },
   "dependencies": {
+    "@foal/cli": "^2.3.0",
     "@foal/core": "^2.0.0",
     "@foal/storage": "^2.3.0",
     "@foal/typeorm": "^2.0.0",
-    "better-sqlite3": "~7.1.2",
     "ebook-convert": "^2.0.1",
     "gm": "^1.23.1",
     "lru-cache": "^6.0.0",
