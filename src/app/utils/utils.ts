@@ -25,6 +25,9 @@ export class Utils {
 
     getFirstFileOnFolder(originFolder: string, folderName: string): string {
         const fPath = Path.join(originFolder, folderName)
+        const isExists = fs.existsSync(fPath)
+        if (!isExists) return ''
+
         const files = fs.readdirSync(fPath)
         const first = files.pop()
         if (!first) return ''
